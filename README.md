@@ -16,7 +16,7 @@ Then activate this new environment.
 ```
 conda activate my-rdkit-env
 ```
-*Note :*  Make sure that the python3 version is 3.5 and higher and pip3 is installed
+*Note :*  Make sure that the python3 version is 3.5 or higher and pip3 is installed
 
 ## Step 2 :
 Inside this environment install GENTRL.
@@ -24,32 +24,8 @@ Inside this environment install GENTRL.
 cd <Path_to_GENTRL_folder>
 python3 setup.py install
 ```
-*Note :* The `setup.py` doesn't install scikit-learn, so if you don't have it installed please install it using 
-```
-pip3 install scikit-learn
-
-or
-
-python3 -m pip install scikit-learn
-```
 
 ## Step 3 : (Optional)
-Installing MOSES is optional but if you want to run the examples given [here](https://github.com/Bibyutatsu/GENTRL/tree/master/examples) I would recommend you to install it.
-
-**PyPi** (Recommended)
-```
-pip3 install molsets
-```
-
-**Using git repo**
-```
-git clone https://github.com/molecularsets/moses.git
-cd moses
-python3 setup.py install
-```
-*Note :* The moses depend on RDKit so please install it after Step 1.
-
-## Step 4 : (Optional)
 Making a new **Kernel** for jupyter notebook is recommended. For making a new kernel please follow these steps.
 ```
 python3 -m pip install ipykernel
