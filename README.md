@@ -1,7 +1,9 @@
-# Introduction
-Here I have aimed to explain my understanding about the code in GENTRL and some minor steps for new users who want to run it or understand it.
+# Generative Tensorial Reinforcement Learning (GENTRL) 
+Supporting Information for the paper _"[Deep learning enables rapid identification of potent DDR1 kinase inhibitors](https://www.nature.com/articles/s41587-019-0224-x)"_.
 
-It is originally forked from [this repo](https://github.com/insilicomedicine/GENTRL).
+The GENTRL model is a variational autoencoder with a rich prior distribution of the latent space. We used tensor decompositions to encode the relations between molecular structures and their properties and to learn on data with missing values. We train the model in two steps. First, we learn a mapping of a chemical space on the latent manifold by maximizing the evidence lower bound. We then freeze all the parameters except for the learnable prior and explore the chemical space to find molecules with a high reward.
+
+![GENTRL](images/gentrl.png)
 
 # Installation
 
