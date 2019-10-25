@@ -62,13 +62,13 @@ With these the installation is over and now we are ready to run the examples pro
 # Explanation
 
 ## pretrain.ipynb
-In this notebook the Variational Auto Encoder(VAE) is trained. It encodes the SMILES onto the latent space with a rich prior distribution. To put it simply, in this step the structural properties of each training molecule is transferred to a latent space, and process encodings of molecules are created. So, the model learns about the molecules structural properties and interrelation of structure and rewards.
+This notebook trains a Variational Auto Encoder (VAE) with TTLP prior distribution to encode SMILES strings onto the latent space. In this step, VAE maps the structural properties of each training molecule to a latent code.
 
 
 ## train_rl.ipynb
-In this notebook the Reinforecement learning of the model takes place. In this step except the learnable prior all other parameters are kept constant and then the latent space is explored for new molecules with higher rewards. So in this step the model learns to generate better molecules on the basis of reward function.
+This notebook applies reinforcement learning to optimize a reward function. In this step, encoder and decoder are fixed, and the model learns only the learnable prior.
 
 ## sampling.ipynb
-In this notebook new molecules are generated in the form of SMILES. Using RDKit's Draw module a grid of images of these newly generated molecules is produced as shown below ([Link](https://github.com/Bibyutatsu/GENTRL/blob/master/images/Sampling_big.png) of the whole grid).
+This notebook generates new molecules in the form of SMILES strings. Below we show examples of generated molecules (more samples [here](https://github.com/Bibyutatsu/GENTRL/blob/master/images/Sampling_big.png)).
 
 ![Sampling](https://github.com/Bibyutatsu/GENTRL/blob/master/images/Sampling.jpeg)
